@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional Light Theme */
+    --background: 210 40% 98%; /* Light Gray #F3F4F6 */
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Deep Blue (#1E3A8A) */
+    --primary: 224 64% 33%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Indigo (#4338CA) */
+    --accent: 244 56% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Slate (#64748B) */
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Status */
+    --success: 160 84% 39%; /* #10B981 */
+    --warning: 38 92% 50%; /* #F59E0B */
+    --destructive: 0 84% 60%; /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 64% 33%;
+
+    --radius: 0.5rem;
+
+    /* Subtle professional shadows */
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+
+    /* Sidebar - Dark Navy for high contrast */
+    --sidebar-background: 222 47% 11%;       /* Deep navy #0F172A */
+    --sidebar-foreground: 213 31% 91%;       /* Soft white #E2E8F0 */
+    --sidebar-primary: 224 64% 33%;          /* Deep blue */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 18%;           /* Slightly lighter navy for hover */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 47% 18%;           /* Subtle navy border */
+    --sidebar-ring: 213 31% 91%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    /* Soft clean background, no gaming gradients */
+  }
+
+  h1, h2, h3, h4 { font-family: 'Poppins', 'Inter', sans-serif; letter-spacing: -0.01em; }
+}
+
+@layer components {
+  /* Minimal card style instead of heavy glass */
+  .glass {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+  }
+
+  .text-gradient {
+    /* More professional text look without gradient */
+    color: hsl(var(--primary));
+  }
+}

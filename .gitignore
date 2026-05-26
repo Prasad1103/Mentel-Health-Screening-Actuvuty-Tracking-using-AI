@@ -1,0 +1,51 @@
+# Dependencies
+frontend/node_modules/
+backend/node_modules/
+backend/venv/
+
+# Build outputs
+frontend/dist/
+dist/
+build/
+
+# Runtime and generated files
+backend/uploads/
+database/*.db
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.err
+*.out
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Large local research artifacts
+data/
+models/
+*.zip
+*.h5
+*.pkl
+*.safetensors
+*.pt
+*.pth
+
+# Notebook/editor artifacts
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.sixth/
+
+# Environment files
+.env
+.env.local
+
+# Local report/export copies
+reports copy/
+* copy.*
+BE_Project_Report.html
+BE_Project_Report.pdf
