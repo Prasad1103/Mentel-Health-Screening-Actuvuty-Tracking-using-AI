@@ -1,0 +1,93 @@
+Fusion Model Evaluation Results (Simulated on GoEmotions Test Set)
+=================================================================
+
+NOTE: No true multimodal test set exists. Results are simulated using
+GoEmotions text data with synthetic audio/face inputs.
+
+SCENARIO A: All 3 modalities agree (text probs used for all)
+--------------------------------------------------
+Accuracy  : 0.0291  (2.91%)
+Precision : 0.0823
+Recall    : 0.0291
+F1 Score  : 0.0237
+
+              precision    recall  f1-score   support
+
+    Positive     0.0000    0.0000    0.0000      2054
+     Neutral     0.1463    0.0059    0.0113      2040
+      Stress     0.1464    0.0558    0.0808       842
+     Anxiety     0.0006    0.0111    0.0011        90
+    Negative     0.0819    0.2300    0.1208       287
+  Depression     0.0128    0.2807    0.0244       114
+
+    accuracy                         0.0291      5427
+   macro avg     0.0647    0.0972    0.0397      5427
+weighted avg     0.0823    0.0291    0.0237      5427
+
+Confusion Matrix:
+[[   0    9   13 1503   62  467]
+ [   0   12   51  147  214 1616]
+ [   0    4   47   42  447  302]
+ [   0   52   11    1    9   17]
+ [   0    5  128   13   66   75]
+ [   0    0   71    3    8   32]]
+
+
+SCENARIO B: Text only, audio/face = uniform distribution
+--------------------------------------------------
+Accuracy  : 0.0925  (9.25%)
+Precision : 0.0625
+Recall    : 0.0925
+F1 Score  : 0.0378
+
+              precision    recall  f1-score   support
+
+    Positive     0.0277    0.0058    0.0097      2054
+     Neutral     0.0851    0.0020    0.0038      2040
+      Stress     0.1243    0.5582    0.2034       842
+     Anxiety     0.0000    0.0000    0.0000        90
+    Negative     0.0137    0.0557    0.0220       287
+  Depression     0.0000    0.0000    0.0000       114
+
+    accuracy                         0.0925      5427
+   macro avg     0.0418    0.1036    0.0398      5427
+weighted avg     0.0625    0.0925    0.0378      5427
+
+Confusion Matrix:
+[[  12    2 1949    0   91    0]
+ [ 142    4  953    0  941    0]
+ [ 260    2  470    0  110    0]
+ [   1    0   86    0    3    0]
+ [  12    3  256    0   16    0]
+ [   6   36   66    0    6    0]]
+
+
+SCENARIO C: Text + audio agree, face = uniform
+--------------------------------------------------
+Accuracy  : 0.0221  (2.21%)
+Precision : 0.0708
+Recall    : 0.0221
+F1 Score  : 0.0156
+
+              precision    recall  f1-score   support
+
+    Positive     0.0148    0.0015    0.0027      2054
+     Neutral     0.1216    0.0044    0.0085      2040
+      Stress     0.0968    0.0178    0.0301       842
+     Anxiety     0.0010    0.0222    0.0019        90
+    Negative     0.0789    0.2300    0.1174       287
+  Depression     0.0114    0.2193    0.0218       114
+
+    accuracy                         0.0221      5427
+   macro avg     0.0541    0.0825    0.0304      5427
+weighted avg     0.0708    0.0221    0.0156      5427
+
+Confusion Matrix:
+[[   3    6   15 1644   60  326]
+ [  39    9   29  237  234 1492]
+ [  35    3   15   58  461  270]
+ [   4   50   10    2    9   15]
+ [ 111    5   23   26   66   56]
+ [  11    1   63    7    7   25]]
+
+
