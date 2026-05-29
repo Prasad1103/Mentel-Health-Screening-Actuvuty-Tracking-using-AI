@@ -49,3 +49,7 @@ reports copy/
 * copy.*
 BE_Project_Report.html
 BE_Project_Report.pdf
+
+# Local evaluation run outputs
+evaluation/*_eval_output/
+evaluation/comparison_output/

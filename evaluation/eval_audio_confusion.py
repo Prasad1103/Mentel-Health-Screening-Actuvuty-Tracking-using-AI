@@ -21,9 +21,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import to_categorical
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
-DATA_PATH = str(BASE_DIR / "data" / "audio" / "ravdess")
-MODEL_PATH = str(BASE_DIR / "models" / "speech_final_6.h5")
-ENCODER_PATH = str(BASE_DIR / "models" / "speech_label_encoder.pkl")
+PROJECT_ROOT = BASE_DIR.parent
+DATA_PATH = str(PROJECT_ROOT / "data" / "audio" / "ravdess")
+MODEL_PATH = str(PROJECT_ROOT / "models" / "speech_final_6.h5")
+ENCODER_PATH = str(PROJECT_ROOT / "models" / "speech_label_encoder.pkl")
 OUTPUT_DIR = BASE_DIR / "audio_eval_output"
 OUTPUT_DIR.mkdir(exist_ok=True)
 

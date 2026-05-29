@@ -17,8 +17,9 @@ from sklearn.metrics import (
 )
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
-DATA_DIR = str(BASE_DIR / "data" / "face" / "RAF-DB" / "DATASET" / "test")
-MODEL_PATH = str(BASE_DIR / "models" / "face_final_6.h5")
+PROJECT_ROOT = BASE_DIR.parent
+DATA_DIR = str(PROJECT_ROOT / "data" / "face" / "RAF-DB" / "DATASET" / "test")
+MODEL_PATH = str(PROJECT_ROOT / "models" / "face_final_6.h5")
 OUTPUT_DIR = BASE_DIR / "face_eval_output"
 OUTPUT_DIR.mkdir(exist_ok=True)
 

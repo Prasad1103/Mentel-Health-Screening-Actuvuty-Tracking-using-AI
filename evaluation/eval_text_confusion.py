@@ -16,7 +16,8 @@ from sklearn.metrics import (
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_DIR = BASE_DIR / "models" / "text_final_6"
+PROJECT_ROOT = BASE_DIR.parent
+MODEL_DIR = PROJECT_ROOT / "models" / "text_final_6"
 OUTPUT_DIR = BASE_DIR / "text_eval_output"
 OUTPUT_DIR.mkdir(exist_ok=True)
 

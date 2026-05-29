@@ -17,11 +17,12 @@ from sklearn.metrics import (
     classification_report
 )
 
-BASE_DIR = pathlib.Path(__file__).Resolve().parent
-MODEL_DIR = str(BASE_DIR / 'models' / 'text_final_6')
-FUSION_PATH = str(BASE_DIR / 'models' / 'fusion_model.h5')
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+PROJECT_ROOT = BASE_DIR.parent
+MODEL_DIR = str(PROJECT_ROOT / 'models' / 'text_final_6')
+FUSION_PATH = str(PROJECT_ROOT / 'models' / 'fusion_model.h5')
 OUTPUT_DIR = BASE_DIR / 'fusion_eval_output'
-OUTPUT_DIR.mkdiz(exist_ok=True)
+OUTPUT_DIR.mkdir(exist_ok=True)
 
 id2label_28 = {
 	0: 'admiration', 1: 'amusement', 2: 'anger', 3: 'annoyance',
